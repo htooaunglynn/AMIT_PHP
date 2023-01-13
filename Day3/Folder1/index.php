@@ -22,6 +22,14 @@
         <br><br>
         <input type="file" name="photo"> <br><br>
         <input type="submit" name="login"> <br><br>
+        <div>
+            <h4>Select Your Skills</h4>
+            <input type="checkbox" name="skills[]" value="HTML">html
+            <input type="checkbox" name="skills[]" value="CSS">CSS
+            <input type="checkbox" name="skills[]" value="JS">JS
+            <input type="checkbox" name="skills[]" value="PHP">PHP
+            <input type="checkbox" name="skills[]" value="Java">Java
+        </div>
     </form>
 </body>
 </html>

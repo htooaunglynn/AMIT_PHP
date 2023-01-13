@@ -12,6 +12,8 @@
     $p_name = $_FILES['photo']['name'];
     $p_tmp_name = $_FILES['photo']['tmp_name'];
     move_uploaded_file($p_tmp_name, "./img/$p_name");
+    $skill = $_POST['skills'];
+    // print_r($skill);
     }
 ?>
 
@@ -26,10 +28,6 @@
 
     <style>
 
-        /* * {
-            font-family: 'Courier New', Courier, monospace;
-        } */
-
         a {
             text-decoration: none;
             color: black;
@@ -42,32 +40,28 @@
             right: 100px;
         }
 
-        .pro {
-            display: inline-block;
+        section > div {
             border: 1px solid black;
 
-            position: absolute;
-            top: 70px;
-            left: 450px;
-
-            padding: 20px 40px;
+            padding: 10px 20px;
             border-radius: 10px;
+
         }
 
-        .photo {
-            border: 1px solid black;
-            border-radius: 10px;
+        section {
+            display: flex;
+            flex: 1 1 20rem;
+            gap: 40px;
 
-            position: absolute;
-            top: 500px;
-            left: 100px;
+            justify-content: space-between;
         }
     </style>
 </head>
 <body>
     <a href="./index.php">Go to Back</a>
 
-    <div class="pro">
+    <section>
+        <div class="pro">
         <h1>My Profile</h1>
         <h4> <span>Name:</span> <?php echo $name ?></h4>
         <h4> <span>Email:</span> <?php echo $email ?></h4>
@@ -75,12 +69,18 @@
         <img src="./img/<?= $p_name; ?>" alt="" width="300">
         <h4> <span>Age:</span> <?php echo $age ?></h4>
         <h4> <span>Message:</span> <?php echo $msg ?></h4>
+        <p>
+            <?php
+                foreach ($skill as $key => $value) {
+                    echo ++$key . " My hobbies is $value <br>";
+                }
+            ?>
+        </p>
     </div>
 
     <div class="photo">
         <?php
         $all_pho = scandir("./img");
-        // print_r($all_pho);
 
         for ($i = 2; $i < count($all_pho); $i++) {
             $img = $all_pho[$i];
@@ -88,5 +88,6 @@
         }
         ?>
     </div>
+    </section>
 </body>
 </html>
