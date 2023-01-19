@@ -9,7 +9,7 @@ include "./partials/header.php";
 if (isset($_POST['register'])) {
 	$name = mysqli_real_escape_string($db_connection, $_POST['name']);
 	$email = mysqli_real_escape_string($db_connection, $_POST['email']);
-	$password = mysqli_real_escape_string($db_connection, $_POST['password']);
+	$password = mysqli_real_escape_string($db_connection, md5($_POST['password']));
 	$phone = mysqli_real_escape_string($db_connection, $_POST['phone']);
 	$city = mysqli_real_escape_string($db_connection, $_POST['city']);
 
