@@ -3,7 +3,7 @@ include "./partials/header.php";
 ?>
 
 	<main>
-		<form action="register.php" class="shadow-lg m-auto w-50 p-5 mt-5" method="post">
+		<form action="login.php" class="shadow-lg m-auto w-50 p-5 mt-5" method="post">
 			<h1 class="text-center mb-3">Login</h1>
 			<div class="mb-3">
 				<input type="email" name="email" class=" form-control py-3" placeholder="Email" autocomplete="off">
@@ -12,7 +12,7 @@ include "./partials/header.php";
 				<input type="password" name="password" class=" form-control py-3" placeholder="Password" autocomplete="off">
 			</div>
 			<div class="mb-4">
-				<input type="submit" name="register" class="btn btn-lg btn-warning float-end" value="Login">
+				<input type="submit" name="login" class="btn btn-lg btn-warning float-end" value="Login">
 			</div>
 		</form>
 	</main>
