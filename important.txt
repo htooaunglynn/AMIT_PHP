@@ -1,0 +1,4 @@
+<!-- 1.action -->
+<!-- 2.method {default ==> GET} -->
+<!-- 3.name -->
+<!-- 4.file must be inlcude enctype -->
